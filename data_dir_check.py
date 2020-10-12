@@ -89,4 +89,4 @@ def validate_dir(name, typ):
     return True if s else False
 
 
-check_dir()
+
