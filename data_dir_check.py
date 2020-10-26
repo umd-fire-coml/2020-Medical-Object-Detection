@@ -15,6 +15,7 @@ def check_dir ():
     print('[data] directory exists')
     perf = True
    
+"""
     #checks validate directory
     if not os.path.isdir('{}/data/validate'.format(home)):
         print('[validate] directory does not exist')
@@ -35,6 +36,7 @@ def check_dir ():
             print('[normal validate] directory exists')
             x = validate_dir('{}/data/validate/normal'.format(home), "normal")
             perf = x if perf else perf
+  """
     #checks test directory
     if not os.path.isdir('{}/data/test'.format(home)):
         print('[test] directory does not exist')
