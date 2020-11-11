@@ -8,7 +8,7 @@ def pipeline(generator):
     pipe = tf.data.Dataset.from_generator(
         lambda: generator, 
         output_types=(tf.float32, tf.float32),
-        output_shapes=([1,150,150,3], [1,]))
+        output_shapes=([1,500,500,3], [1,]))
     
     pipe = pipe.shuffle(batch_size, reshuffle_each_iteration=True)
     pipe = pipe.batch(batch_size)
