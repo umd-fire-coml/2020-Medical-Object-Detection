@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 import os
 import re
-import data_generator.py 
+
 
 def pipeline(generator):
     pipe = tf.data.Dataset.from_generator(
