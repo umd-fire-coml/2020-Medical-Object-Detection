@@ -11,4 +11,4 @@ ISBI2016_ISIC_Part3_Training_Data
     -malignant
  -train
     -benign
-    -malign
+    -malignant
