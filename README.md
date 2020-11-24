@@ -26,3 +26,9 @@ ISBI2016_ISIC_Part3_Training_Data
     -benign
     
     -malignant
+
+Data Generator:
+ - Generates data from the dataset to feed to the model
+ - Makes it possible to handle large amounts of data
+ - Uses Image Data Generator which allows augmentation and preparation of images for image classification in the model
+ - Uses tensorflow flow from directory to generate batches of train and test data
