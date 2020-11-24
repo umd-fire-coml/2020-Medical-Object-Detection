@@ -27,8 +27,28 @@ ISBI2016_ISIC_Part3_Training_Data
     
     -malignant
 
-Data Generator:
+# Data Generator:
  - Generates data from the dataset to feed to the model
  - Makes it possible to handle large amounts of data
  - Uses Image Data Generator which allows augmentation and preparation of images for image classification in the model
  - Uses tensorflow flow from directory to generate batches of train and test data
+
+# Input Pipeline:
+ - The pipeline will feed batches of data from the data generator into the model
+ - Prefetches and processes next batch of data as it's feeding in the current batch into the model
+ - The following code will create the pipeline, taking data from the data generator
+ ```
+ pipe = tf.data.Dataset.from_generator(
+        lambda: generator, 
+        output_types=(tf.float32, tf.float32),
+        output_shapes=([1,150,150,3], [1,]))
+ ```
+  - Next, we will modify the images in each batch using the map function and a modify function we created
+  ```
+  pipe.map (lambda x,y : modify(x,y))
+  ```
+  - Then, we run the prefetch method to create a dataset that will prefetch the next batch as the current data is processed
+  ```
+  pipe.prefetch(batch_size)
+  ```
+  - This is the most important parts of the pipeline, allowing us to fetch data from the data generator and prefetch the next batch as we're processing the current data, decreasing idle time and increasing efficiency
