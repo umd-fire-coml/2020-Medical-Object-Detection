@@ -77,6 +77,18 @@ model = Model(inputs=visible, outputs=output)
 )
   ```
   - Then, we trained the model and saved the weights we created
+  ```
+  num_epochs = 5 #You can increase or decrease this number depending on how long you want to train for
+  if (path.isfile('/content/gdrive/My Drive/ISBI2016_ISIC_Part3_Training_Data/model weights/model.h5')):
+      #You can change the path of "model.h5" to wherever you want to save/load the weights
+      print("Model doesn't currently exist, creating new one.")
+      history = model.fit(pipeline(train_generator), batch_size=32, steps_per_epoch=100, epochs=num_epochs)
+      model.save_weights("/content/gdrive/My Drive/ISBI2016_ISIC_Part3_Training_Data/model weights/model.h5")
+  else:
+      model.load_weights("/content/gdrive/My Drive/ISBI2016_ISIC_Part3_Training_Data/model weights/model.h5")
+      history = model.fit(pipeline(train_generator), batch_size=32, steps_per_epoch=100, epochs=num_epochs)
+      model.save_weights("/content/gdrive/My Drive/ISBI2016_ISIC_Part3_Training_Data/model weights/model.h5")
+  ```
 
 Explanation Video: https://youtu.be/00TLCkC91vE
 
