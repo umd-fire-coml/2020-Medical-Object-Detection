@@ -77,3 +77,6 @@ model = Model(inputs=visible, outputs=output)
 )
   ```
   - Then, we trained the model and saved the weights we created
+
+Explanation Video: https://youtu.be/00TLCkC91vE
+Interactive Model: https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
