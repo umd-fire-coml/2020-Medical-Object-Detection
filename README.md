@@ -63,6 +63,7 @@ The data should now be in the "My Drive" section. This will allow you to run the
 # The Model:
  - The model will take the preprocessed images from the input pipeline and trains itself to learn which are benign and which are malignant
  - We used a Convolutional Neural Network, which is specific for image clssification
+ - To create and train the model, use the model.py script provided in the repository
 
  ```
 visible = Input(shape=(500, 500,3))
