@@ -98,7 +98,7 @@ model = Model(inputs=visible, outputs=output)
       history = model.fit(pipeline(train_generator), batch_size=32, steps_per_epoch=100, epochs=num_epochs)
       model.save_weights("/content/gdrive/My Drive/ISBI2016_ISIC_Part3_Training_Data/model weights/model.h5")
   ```
-
+We have provided a visualtion.ipynb notebook so you are able to see a visualization of the training accuracy and loss.
 Here is a video containing an explanation of the steps taken to build and test our model: 
 https://youtu.be/00TLCkC91vE
 
