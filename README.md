@@ -39,7 +39,7 @@ The data should now be in the "My Drive" section. This will allow you to run the
  - Generates data from the dataset to feed to the model
  - Makes it possible to handle large amounts of data
  - Uses Image Data Generator which allows augmentation and preparation of images for image classification in the model
- - Uses tensorflow flow from directory to generate batches of train and test data
+ - Uses Tensorflow flow from directory to generate batches of train and test data
 
 # Input Pipeline:
  - The pipeline will feed batches of data from the data generator into the model
@@ -63,7 +63,7 @@ The data should now be in the "My Drive" section. This will allow you to run the
 # The Model:
  - The model will take the preprocessed images from the input pipeline and trains itself to learn which are benign and which are malignant
  - We used a Convolutional Neural Network, which is specific for image clssification
- - The model has multiple layers for input and output, shown below
+
  ```
 visible = Input(shape=(500, 500,3))
 conv1 = Conv2D(32, kernel_size=4, activation='relu')(visible)
@@ -100,4 +100,4 @@ model = Model(inputs=visible, outputs=output)
 
 Explanation Video: https://youtu.be/00TLCkC91vE
 
-Interactive Model: https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
+Interactive Notebook: https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
