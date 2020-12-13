@@ -99,6 +99,8 @@ model = Model(inputs=visible, outputs=output)
       model.save_weights("/content/gdrive/My Drive/ISBI2016_ISIC_Part3_Training_Data/model weights/model.h5")
   ```
 
-Explanation Video: https://youtu.be/00TLCkC91vE
+Here is a video containing an explanation of the steps taken to build and test our model: 
+https://youtu.be/00TLCkC91vE
 
-Interactive Notebook: https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
+If you would like to test your model an example image, here is a Google Colab notebook: 
+https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
