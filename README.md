@@ -26,12 +26,42 @@ ISBI2016_ISIC_Part3_Training_Data
     -benign
     
     -malignant
+    
+Instructions to move data to "My Drive" in Google Drive:
+
+1. Sign in to the Google account you want the data downloaded to
+2. Access the link, and make sure the folder is in the "Shared with Me" section
+3. Click on the folder and use the keyboard command "Shift + Z"
+4. A menu will pop up. This menu will allow you to choose where you want the directory moved to. Select "My Drive".
+The data should now be in the "My Drive" section. This will allow you to run the data generator, which will allow you to train the model.
+
+# Repository Breakdown:
+
+Before explaining our project further, here is a breakdown of our Github repository.
+
+environment.yml: contains list of required packages for conda or pip to install
+
+data_dir_check.py: checks to make sure the proper data exists 
+
+data_generator.py: loads the dataset for training and testing and makes all images the uniform size of 500x500
+
+model.py: builds the model, trains the model on this dataset, and saves the model's weights
+
+Interactive.ipynb: tests the model with pre-trained weights and provides visualization of predicted results
+
+check_env.py: chekcs to make sure all packages are up to date
+
+pipeline.py: contains the input pipeline
+
+visualization.ipynb: shows the loss and accuracy of the model in graph form
+=======
 
 # Data Generator:
  - Generates data from the dataset to feed to the model
  - Makes it possible to handle large amounts of data
  - Uses Image Data Generator which allows augmentation and preparation of images for image classification in the model
- - Uses tensorflow flow from directory to generate batches of train and test data
+ - Uses Tensorflow flow from directory to generate batches of train and test data
+=======
 
 # Input Pipeline:
  - The pipeline will feed batches of data from the data generator into the model
@@ -55,6 +85,9 @@ ISBI2016_ISIC_Part3_Training_Data
 # The Model:
  - The model will take the preprocessed images from the input pipeline and trains itself to learn which are benign and which are malignant
  - We used a Convolutional Neural Network, which is specific for image clssification
+ - To create and train the model, use the model.py script provided in the repository
+
+=======
  - The model has multiple layers for input and output, shown below
  ```
 visible = Input(shape=(500, 500,3))
@@ -89,6 +122,14 @@ model = Model(inputs=visible, outputs=output)
       history = model.fit(pipeline(train_generator), batch_size=32, steps_per_epoch=100, epochs=num_epochs)
       model.save_weights("/content/gdrive/My Drive/ISBI2016_ISIC_Part3_Training_Data/model weights/model.h5")
   ```
+  - We have provided a visualtion.ipynb notebook so you are able to see a visualization of the training accuracy and loss.
+
+Here is a video containing an explanation of the steps taken to build and test our model: 
+https://youtu.be/00TLCkC91vE
+
+If you would like to test your model an example image, here is a Google Colab notebook: 
+https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
+=======
 
 Explanation Video: https://youtu.be/00TLCkC91vE
 
