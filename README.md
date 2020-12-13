@@ -60,7 +60,6 @@ visualization.ipynb: shows the loss and accuracy of the model in graph form
  - Makes it possible to handle large amounts of data
  - Uses Image Data Generator which allows augmentation and preparation of images for image classification in the model
  - Uses Tensorflow flow from directory to generate batches of train and test data
-=======
 
 # Input Pipeline:
  - The pipeline will feed batches of data from the data generator into the model
