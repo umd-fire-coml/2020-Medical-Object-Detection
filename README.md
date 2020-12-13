@@ -33,4 +33,4 @@ Instructions to move data to "My Drive" in Google Drive:
 2. Access the link, and make sure the folder is in the "Shared with Me" section
 3. Click on the folder and use the keyboard command "Shift + Z"
 4. A menu will pop up. This menu will allow you to choose where you want the directory moved to. Select "My Drive".
-The data should now be in the "My Drive" section.
+The data should now be in the "My Drive" section. This will allow you to run the data generator, which will allow you to train the model.
