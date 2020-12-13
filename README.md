@@ -54,7 +54,6 @@ check_env.py: chekcs to make sure all packages are up to date
 pipeline.py: contains the input pipeline
 
 visualization.ipynb: shows the loss and accuracy of the model in graph form
-=======
 
 # Data Generator:
  - Generates data from the dataset to feed to the model
@@ -129,8 +128,3 @@ https://youtu.be/00TLCkC91vE
 
 If you would like to test your model an example image, here is a Google Colab notebook: 
 https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
-=======
-
-Explanation Video: https://youtu.be/00TLCkC91vE
-
-Interactive Model: https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
