@@ -54,12 +54,14 @@ check_env.py: chekcs to make sure all packages are up to date
 pipeline.py: contains the input pipeline
 
 visualization.ipynb: shows the loss and accuracy of the model in graph form
+=======
 
 # Data Generator:
  - Generates data from the dataset to feed to the model
  - Makes it possible to handle large amounts of data
  - Uses Image Data Generator which allows augmentation and preparation of images for image classification in the model
  - Uses Tensorflow flow from directory to generate batches of train and test data
+=======
 
 # Input Pipeline:
  - The pipeline will feed batches of data from the data generator into the model
@@ -85,6 +87,8 @@ visualization.ipynb: shows the loss and accuracy of the model in graph form
  - We used a Convolutional Neural Network, which is specific for image clssification
  - To create and train the model, use the model.py script provided in the repository
 
+=======
+ - The model has multiple layers for input and output, shown below
  ```
 visible = Input(shape=(500, 500,3))
 conv1 = Conv2D(32, kernel_size=4, activation='relu')(visible)
@@ -125,3 +129,8 @@ https://youtu.be/00TLCkC91vE
 
 If you would like to test your model an example image, here is a Google Colab notebook: 
 https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
+=======
+
+Explanation Video: https://youtu.be/00TLCkC91vE
+
+Interactive Model: https://colab.research.google.com/drive/1e1LFupI_S8jD0LTI5V1DpMQQckAgqjsM?usp=sharing
