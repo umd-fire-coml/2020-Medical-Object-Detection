@@ -4,26 +4,6 @@ This repository contains a neural network that is able to detect melanoma, a ser
 
 This type of cancer can be easily confused with skin discoloration, so being able to notice what is skin cancer and benign skin discoloration is extremely important.
 
-
-
-Before explaining our project further, here is a breakdown of our Github repository.
-
-environment.yml: contains list of required packages for conda or pip to install
-
-data_dir_check.py: checks to make sure the proper data exists 
-
-data_generator.py: loads the dataset for training and testing and makes all images the uniform size of 500x500
-
-model.py: builds the model, trains the model on this dataset, and saves the model's weights
-
-Interactive.ipynb: tests the model with pre-trained weights and provides visualization of predicted results
-
-check_env.py: chekcs to make sure all packages are up to date
-
-pipeline.py: contains the input pipeline
-
-visualization.ipynb: shows the loss and accuracy of the model in graph form
-
 ![Melanoma vs Benign](https://chcsga.org/wp-content/uploads/2019/05/d.jpg)
 
 As seen in the above images, melanoma can be extremely difficult to detect just based off of the human eye, so machine learning can provide an essential tool to help detect a life-threatening disease.
@@ -54,6 +34,26 @@ Instructions to move data to "My Drive" in Google Drive:
 3. Click on the folder and use the keyboard command "Shift + Z"
 4. A menu will pop up. This menu will allow you to choose where you want the directory moved to. Select "My Drive".
 The data should now be in the "My Drive" section. This will allow you to run the data generator, which will allow you to train the model.
+
+# Repository Breakdown:
+
+Before explaining our project further, here is a breakdown of our Github repository.
+
+environment.yml: contains list of required packages for conda or pip to install
+
+data_dir_check.py: checks to make sure the proper data exists 
+
+data_generator.py: loads the dataset for training and testing and makes all images the uniform size of 500x500
+
+model.py: builds the model, trains the model on this dataset, and saves the model's weights
+
+Interactive.ipynb: tests the model with pre-trained weights and provides visualization of predicted results
+
+check_env.py: chekcs to make sure all packages are up to date
+
+pipeline.py: contains the input pipeline
+
+visualization.ipynb: shows the loss and accuracy of the model in graph form
 
 # Data Generator:
  - Generates data from the dataset to feed to the model
